@@ -22,6 +22,14 @@ Desde PowerShell:
 
 Para revisar la demo, abre `mvp-generator/index.html` en un navegador. Es una demo estática y usa únicamente datos sintéticos.
 
+También puedes generar una propuesta local desde una respuesta de entrevista:
+
+```powershell
+python scripts/generate-proposal.py examples/plumbing-discovery-response.json output/proposal.json
+```
+
+La salida queda en estado `pending_approval`; el script nunca la marca como aprobada.
+
 ## Estructura
 
 ```text

@@ -38,4 +38,6 @@ foreach ($needle in @('classList.remove', 'Alcance aprobado', 'approval')) {
   if ($js -notmatch [regex]::Escape($needle)) { throw "La lógica de aprobación no contiene: $needle" }
 }
 
+python scripts/generate-proposal.py examples/plumbing-discovery-response.json | ConvertFrom-Json | Out-Null
+
 Write-Output "Workflow válido: $($required.Count) archivos requeridos, JSON válido y gate de aprobación presente."
