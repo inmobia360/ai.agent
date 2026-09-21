@@ -1,0 +1,14 @@
+{
+  "business": "Fontanería Demo",
+  "sector": "servicios de fontanería",
+  "source": "synthetic",
+  "status": "complete",
+  "responses": {
+    "main_service": "Reparaciones, urgencias y pequeñas instalaciones",
+    "lead_channels": ["teléfono", "WhatsApp", "recomendaciones"],
+    "repeated_tasks": ["pedir datos de la avería", "preparar presupuestos", "organizar visitas", "hacer seguimiento"],
+    "main_pain": "Los avisos llegan incompletos y se pierde tiempo antes de poder responder",
+    "human_approval": ["diagnóstico técnico", "precio final", "fecha confirmada"],
+    "demo_goal": "Ver una incidencia desde la entrada hasta el siguiente paso recomendado"
+  }
+}

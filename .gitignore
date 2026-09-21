@@ -1,0 +1,14 @@
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Runtime output and private business data
+output/
+private-data/
+*.local.*
+!.env.example
+
+# Temporary browser/test artifacts
+coverage/
+playwright-report/

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Team Specification",
+  "type": "object",
+  "required": ["director", "agents", "human_review_points"],
+  "properties": {
+    "director": {"type": "string"},
+    "agents": {"type": "array", "items": {"type": "object", "required": ["id", "purpose", "inputs", "outputs", "limits"], "properties": {"id": {"type": "string"}, "purpose": {"type": "string"}, "inputs": {"type": "array", "items": {"type": "string"}}, "outputs": {"type": "array", "items": {"type": "string"}}, "limits": {"type": "array", "items": {"type": "string"}}}}},
+    "human_review_points": {"type": "array", "items": {"type": "string"}}
+  }
+}

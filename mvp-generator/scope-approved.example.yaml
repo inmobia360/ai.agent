@@ -1,0 +1,22 @@
+version: 0.1
+status: approved_example
+business: fontaneria-demo
+included:
+  - registrar incidencia
+  - clasificar urgencia preliminar
+  - generar borrador de presupuesto
+  - proponer siguiente acción
+excluded:
+  - confirmar precio al cliente
+  - confirmar disponibilidad
+  - reservar una cita real
+  - enviar mensajes externos
+data_mode: synthetic
+human_approval_required:
+  - diagnóstico técnico
+  - precio final
+  - fecha de visita
+acceptance_criteria:
+  - una incidencia se registra con campos obligatorios
+  - la demo muestra el razonamiento y las preguntas pendientes
+  - cada salida indica si es borrador o decisión aprobada

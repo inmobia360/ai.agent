@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business Discovery Response",
+  "type": "object",
+  "required": ["business", "responses", "status"],
+  "properties": {
+    "business": {"type": "string", "minLength": 1},
+    "sector": {"type": "string"},
+    "responses": {"type": "object", "additionalProperties": {"type": ["string", "number", "boolean", "array", "null"]}},
+    "status": {"enum": ["draft", "complete", "needs_clarification"]},
+    "source": {"enum": ["client", "consultant", "synthetic"]}
+  }
+}
