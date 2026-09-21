@@ -1,0 +1,36 @@
+name: Validate Business Agent Factory
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  workflow:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate contracts and workflow
+        shell: pwsh
+        run: ./scripts/validate-workflow.ps1
+      - name: Check JavaScript syntax
+        shell: pwsh
+        run: node --check ./mvp-generator/app.js
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Run browser workflow test
+        run: python ./.codex/ci/run-e2e.py
