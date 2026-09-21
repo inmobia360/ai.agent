@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "status": "pending_approval",
+  "business": "Fontanería Demo",
+  "sector": "servicios de fontanería",
+  "diagnosis": {
+    "channels": "teléfono, WhatsApp, recomendaciones",
+    "primary_pain": "Los avisos llegan incompletos y se pierde tiempo antes de poder responder"
+  },
+  "recommended_team": [
+    "director-agent",
+    "intake-agent",
+    "triage-agent",
+    "quote-agent",
+    "scheduling-agent",
+    "follow-up-agent",
+    "quality-agent"
+  ],
+  "mvp_scope": [
+    "registrar incidencia",
+    "clasificar urgencia preliminar",
+    "generar borrador de presupuesto",
+    "proponer siguiente acción"
+  ],
+  "exclusions": [
+    "confirmar precio",
+    "confirmar disponibilidad",
+    "reservar una cita real",
+    "enviar mensajes externos"
+  ],
+  "human_approval_required": [
+    "diagnóstico técnico",
+    "precio final",
+    "fecha de visita"
+  ],
+  "source": "deterministic-discovery-generator",
+  "proposal_id": "fontaneria-demo-proposal-v0.1"
+}

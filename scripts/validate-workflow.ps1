@@ -25,7 +25,7 @@ foreach ($path in $required) {
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Falta el archivo requerido: $path" }
 }
 
-foreach ($path in @('schemas/discovery-response.schema.json', 'schemas/agent-team.schema.json', 'schemas/solution-proposal.schema.json', 'schemas/feedback.schema.json', 'schemas/approved-scope.schema.json', 'schemas/run-state.schema.json', 'examples/plumbing-discovery-response.json')) {
+foreach ($path in @('schemas/discovery-response.schema.json', 'schemas/agent-team.schema.json', 'schemas/solution-proposal.schema.json', 'schemas/feedback.schema.json', 'schemas/approved-scope.schema.json', 'schemas/run-state.schema.json', 'examples/plumbing-discovery-response.json', 'examples/plumbing-proposal-generated.json')) {
   Get-Content -LiteralPath $path -Raw | ConvertFrom-Json | Out-Null
 }
 
