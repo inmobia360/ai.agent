@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Workflow Run State",
+  "type": "object",
+  "required": ["run_id", "business", "stage", "status", "artifacts"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "business": {"type": "string"},
+    "stage": {"enum": ["discovery", "diagnosis", "proposal", "approval", "mvp", "feedback", "iteration"]},
+    "status": {"enum": ["pending", "in_progress", "needs_review", "approved", "blocked", "completed"]},
+    "artifacts": {"type": "array", "items": {"type": "string"}},
+    "current_agent": {"type": "string"},
+    "human_decision_required": {"type": "boolean"},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
