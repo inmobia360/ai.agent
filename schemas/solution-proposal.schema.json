@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business Agent Solution Proposal",
+  "type": "object",
+  "required": ["version", "status", "business", "diagnosis", "recommended_team", "mvp_scope", "exclusions", "human_approval_required"],
+  "properties": {
+    "version": {"type": "string"},
+    "status": {"enum": ["draft", "pending_approval", "approved", "rejected", "superseded"]},
+    "business": {"type": "string", "minLength": 1},
+    "sector": {"type": "string"},
+    "diagnosis": {"type": "object", "required": ["channels", "primary_pain"], "properties": {"channels": {"type": "string"}, "primary_pain": {"type": "string"}}},
+    "recommended_team": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "mvp_scope": {"type": "array", "items": {"type": "string"}},
+    "exclusions": {"type": "array", "items": {"type": "string"}},
+    "human_approval_required": {"type": "array", "items": {"type": "string"}}
+  }
+}

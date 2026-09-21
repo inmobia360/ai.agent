@@ -14,14 +14,15 @@ $required = @(
   'mvp-generator/styles.css',
   'mvp-generator/scope-approved.example.yaml',
   'schemas/discovery-response.schema.json',
-  'schemas/agent-team.schema.json'
+  'schemas/agent-team.schema.json',
+  'schemas/solution-proposal.schema.json'
 )
 
 foreach ($path in $required) {
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Falta el archivo requerido: $path" }
 }
 
-foreach ($path in @('schemas/discovery-response.schema.json', 'schemas/agent-team.schema.json', 'examples/plumbing-discovery-response.json')) {
+foreach ($path in @('schemas/discovery-response.schema.json', 'schemas/agent-team.schema.json', 'schemas/solution-proposal.schema.json', 'examples/plumbing-discovery-response.json')) {
   Get-Content -LiteralPath $path -Raw | ConvertFrom-Json | Out-Null
 }
 
