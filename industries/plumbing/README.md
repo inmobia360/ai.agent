@@ -14,6 +14,8 @@ Una empresa de fontanería puede mejorar la recepción y priorización de avisos
 - `follow-up-agent`: redacta seguimientos.
 - `quality-agent`: comprueba datos y marca lo que debe validar una persona.
 
+Las instrucciones detalladas de los agentes reutilizables están en `agent-library/`. El director debe seleccionar únicamente los agentes que estén justificados por el diagnóstico y por el alcance aprobado.
+
 ## Demo MVP propuesta
 
 1. Formulario de nueva incidencia.
