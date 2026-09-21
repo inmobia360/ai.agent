@@ -30,6 +30,7 @@ discovery/            entrevista y diagnóstico
 orchestration/        director, routing y validación
 agent-library/        catálogo de subagentes reutilizables
 industries/plumbing/  caso piloto
+industries/_template/ plantilla para nuevos sectores
 mvp-generator/        contrato y plantilla de MVP
 schemas/              formatos JSON/YAML intercambiables
 examples/             ejemplos sintéticos

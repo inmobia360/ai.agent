@@ -1,0 +1,8 @@
+sector_id: replace-me
+display_name: Replace me
+shared_agents:
+  - intake-agent
+  - quality-agent
+specialized_agents: []
+required_human_approvals: []
+demo_data_mode: synthetic
