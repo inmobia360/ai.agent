@@ -2,6 +2,8 @@
 
 Marco reutilizable para diagnosticar un negocio, diseñar un equipo de agentes de IA, obtener aprobación y generar un MVP demostrable.
 
+La entrada visual del proyecto está en [index.html](index.html) y la demo interactiva en [mvp-generator/index.html](mvp-generator/index.html).
+
 ## Flujo
 
 `Entrevista → Diagnóstico → Propuesta → Aprobación → MVP → Feedback`
