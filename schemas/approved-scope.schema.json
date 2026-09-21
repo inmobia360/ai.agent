@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approved MVP Scope",
+  "type": "object",
+  "required": ["version", "status", "business", "included", "excluded", "human_approval_required", "acceptance_criteria"],
+  "properties": {
+    "version": {"type": "string"},
+    "status": {"const": "approved"},
+    "business": {"type": "string"},
+    "included": {"type": "array", "items": {"type": "string"}},
+    "excluded": {"type": "array", "items": {"type": "string"}},
+    "human_approval_required": {"type": "array", "items": {"type": "string"}},
+    "acceptance_criteria": {"type": "array", "items": {"type": "string"}}
+  }
+}

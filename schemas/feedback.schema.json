@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MVP Feedback",
+  "type": "object",
+  "required": ["business", "presented_version", "items"],
+  "properties": {
+    "business": {"type": "string"},
+    "presented_version": {"type": "string"},
+    "items": {"type": "array", "items": {"type": "object", "required": ["comment", "category", "priority"], "properties": {"comment": {"type": "string"}, "category": {"enum": ["correction", "approved_change", "new_need", "future_improvement", "out_of_scope"]}, "priority": {"enum": ["low", "medium", "high"]}, "target_version": {"type": "string"}}}}
+  }
+}
